@@ -1,4 +1,5 @@
 function y = crypto(x)
+    % 加密与解密，仅支持ASCII值20至126。
     p = 97;
     c1 = char(169);
     c2 = char(174);
