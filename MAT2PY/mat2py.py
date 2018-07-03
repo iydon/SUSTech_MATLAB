@@ -7,7 +7,7 @@ def mat2lst(content):
     # str         -> list
     return [[[float(row) for row in split('[, ]+',row)] for row in split(';',lst)] for lst in findall('(?<=\[)[\s\S]+?(?=\])', sub('((?<=[^\d\.]) +)|( +(?=[^\d\-+]))', '', sub(' +',' ',content)))]
 
-lsts = matstr2pylst('[1,-2; +3. 4] [1. -2 ; 3. +4], [1, 2 ;3   +4] ! [1;2. ; 3 ;-4]. [-1 , 2 ;3.,4]')
+lsts = mat2lst('[1,-2; +3. 4] [1. -2 ; 3. +4], [1, 2 ;3   +4] ! [1;2. ; 3 ;-4]. [-1 , 2 ;3.,4]')
 print(lsts)
 
 
@@ -33,4 +33,4 @@ def op2mat(s):
 
 res = 'T(a1,a2,a3,a4,a5,a6,a7)=(a2,a3,a4,a5,a6,a7,a1)'
 print(res)
-print(str2mat(res))
+print(op2mat(res))
