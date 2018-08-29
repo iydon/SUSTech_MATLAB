@@ -1,7 +1,7 @@
 % Initialize the image.
 global I J circles
 %{
-[filename, pathname] = uigetfile({'*.jpg;*.tif;*.png;*.gif','ѡ��ͼƬ�ļ�'});
+[filename, pathname] = uigetfile({'*.jpg;*.tif;*.png;*.gif','选择图片文件'});
 I = imread(fullfile(pathname,filename));
 %}
 % I = imread('peppers.png');
