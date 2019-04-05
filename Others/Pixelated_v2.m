@@ -4,7 +4,7 @@ global I J circles
 [filename, pathname] = uigetfile({'*.jpg;*.tif;*.png;*.gif','选择图片文件'});
 I = imread(fullfile(pathname,filename));
 %}
-% I = imread('peppers.png');
+I = imread('peppers.png');
 I = im2double(I);
 [height, width, channel] = size(I);
 [height, width] = deal(2^(round(log(max(height, width))/log(2))));
